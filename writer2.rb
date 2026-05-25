@@ -1,0 +1,3 @@
+File.open "test2.txt" , "w" do |f|
+  f.puts "Hello,File I/O 2"
+end
