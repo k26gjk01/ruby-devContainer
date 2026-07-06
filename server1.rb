@@ -4,7 +4,6 @@
 require 'socket'
 
 def server s
-<<<<<<< Updated upstream
   cmd, path, ver = s.gets.split " "
   # 1行目 HTTP/1.0 200 OK
   # 2行目 Content-Type: text/html
@@ -20,15 +19,6 @@ def server s
   else
     pp "OTHER"
     s.puts "other"
-=======
-  cmd,path,ver = s.gets.split " "
-  pp [cmd,path,ver]
-  s.puts cmd
-  while line = s.gets
-    pp line
-    s.puts line
-    break if line == "\r\n"
->>>>>>> Stashed changes
   end
   s.close
 end
