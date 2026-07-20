@@ -1,6 +1,10 @@
 #! /usr/local/bin/ruby
 # server1.rb
 
+# 7/13 の予定
+# http://localhost/server1.rb
+# へのアクセスでファイルの内容を表示したい
+
 require 'socket'
 
 def server s
