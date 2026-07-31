@@ -1,10 +1,16 @@
 require 'socket'
+require 'prime'
 
 def server s
-  name = s.gets
-  pp name
-  s.print "Hello,#{name}"
+  value = s.gets.split(" ")
+  print value
+  ans = primality_discrimination value[0]
+  s.print "#{ans}\r\n"
   s.close
+end
+
+def primality_discrimination n
+  Prime.prime?(n.to_i)
 end
 
 gs = TCPServer.open('localhost', 80)
